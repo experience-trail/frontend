@@ -1,7 +1,8 @@
 {
   "version": 2,
   "name": "experience-trail",
-  "builds": [{ "src": "next.config.js", "use": "@now/next" }],
+  "builds": [{ "src": "src/server.js", "use": "@now/node" }],
+  "routes": [{ "src": "/(.*)", "dest": "src/server.js" }],
   "build": {
     "env": {
       "AUTH0_DOMAIN": "@auth0_domain",
