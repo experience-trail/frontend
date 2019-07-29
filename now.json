@@ -1,5 +1,5 @@
 {
+  "name": "experiencetrail",
   "version": 2,
-  "name": "experience-trail",
-  "builds": [{ "src": "next.config.js", "use": "@now/next" }]
+  "alias": ["experiencetrail"]
 }
