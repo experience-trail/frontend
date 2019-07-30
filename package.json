@@ -7,11 +7,14 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "@apollo/react-hooks": "^0.1.0-beta.11",
     "@auth0/auth0-spa-js": "^1.0.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
+    "apollo-boost": "^0.4.3",
     "express": "^4.16.4",
+    "graphql": "^14.4.2",
     "highlight.js": "^9.15.6",
     "morgan": "^1.9.1",
     "react": "^16.8.6",
