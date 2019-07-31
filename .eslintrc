@@ -1,0 +1,18 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": ["eslint-config-prettier"],
+
+  "rules": {
+    "semi": "off",
+    "no-unused-vars": "warn",
+    "no-unused-expressions": "warn",
+    "no-useless-return": "warn"
+  },
+  "plugins": ["jsx-ally"]
+}
