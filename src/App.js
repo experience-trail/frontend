@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from "react-router-dom";
 import { Container } from "reactstrap";
 
 import PrivateRoute from "./components/PrivateRoute";
@@ -11,7 +16,17 @@ import Profile from "./views/Profile";
 import { useAuth0 } from "./react-auth0-spa";
 
 // styles
-import "./App.css";
+import "assets/css/bootstrap.min.css";
+import "assets/scss/now-ui-kit.scss";
+import "assets/demo/demo.css";
+import "assets/demo/nucleo-icons-page-styles.css";
+
+// demo pages
+import Index from "views/Index.js";
+import NucleoIcons from "views/NucleoIcons.js";
+import LoginPage from "views/examples/LoginPage.js";
+import LandingPage from "views/examples/LandingPage.js";
+import ProfilePage from "views/examples/ProfilePage.js";
 
 // fontawesome
 import initFontAwesome from "./utils/initFontAwesome";
@@ -26,16 +41,31 @@ const App = () => {
 
   return (
     <Router>
-      <div id="app" className="d-flex flex-column h-100">
-        <NavBar />
-        <Container className="flex-grow-1 mt-5">
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <PrivateRoute path="/profile" component={Profile} />
-          </Switch>
-        </Container>
-        <Footer />
-      </div>
+      <NavBar />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <PrivateRoute path="/profile" component={Profile} />
+
+        {/* Demo pages */}
+        <Route path="/components-demo" render={props => <Index {...props} />} />
+        <Route
+          path="/nucleo-icons-demo"
+          render={props => <NucleoIcons {...props} />}
+        />
+        <Route
+          path="/landing-page-demo"
+          render={props => <LandingPage {...props} />}
+        />
+        <Route
+          path="/profile-page-demo"
+          render={props => <ProfilePage {...props} />}
+        />
+        <Route
+          path="/login-page-demo"
+          render={props => <LoginPage {...props} />}
+        />
+      </Switch>
+      <Footer />
     </Router>
   );
 };
