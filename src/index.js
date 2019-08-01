@@ -4,7 +4,15 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { Auth0Provider } from "./react-auth0-spa";
+import ApolloClient from 'apollo-boost';
+import { ApolloProvider } from '@apollo/react-hooks';
+
 import config from "./auth_config.json";
+
+const client = new ApolloClient({
+  uri: 'https://d3vr82ig632z51.cloudfront.net/graphql',
+  resolvers: {},
+});
 
 const onRedirectCallback = appState => {
   window.history.replaceState(
@@ -15,16 +23,19 @@ const onRedirectCallback = appState => {
       : window.location.pathname
   );
 };
+  
 
 ReactDOM.render(
+  <ApolloProvider client={client}>
   <Auth0Provider
     domain={config.domain}
     client_id={config.clientId}
     redirect_uri={window.location.origin}
     onRedirectCallback={onRedirectCallback}
-  >
+    >
     <App />
-  </Auth0Provider>,
+  </Auth0Provider>
+    </ApolloProvider>,
   document.getElementById("root")
 );
 
