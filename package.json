@@ -4,16 +4,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint src",
-    "format": "yarn prettier -- --write",
-    "prettier": "prettier \"**/*.+(js|jsx|json|css|md|mdx)\"",
-    "validate": "yarn lint && yarn prettier -- --list-different"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged yarn validate"
-    }
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "@apollo/react-hooks": "^0.1.0-beta.11",
@@ -22,8 +13,11 @@
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "apollo-boost": "^0.4.3",
+<<<<<<< HEAD
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
+=======
+>>>>>>> parent of 9f4c424... setup prettier & eslint
     "express": "^4.16.4",
     "graphql": "^14.4.2",
     "highlight.js": "^9.15.6",
@@ -37,12 +31,6 @@
   "devDependencies": {
     "@types/node": "^12.6.3",
     "@types/react": "^16.8.23",
-    "babel-eslint": "^10.0.2",
-    "eslint": "^6.1.0",
-    "eslint-config-prettier": "^6.0.0",
-    "husky": "^3.0.2",
-    "lint-staged": "^9.2.1",
-    "prettier": "^1.18.2",
     "typescript": "^3.5.3"
   },
   "eslintConfig": {
