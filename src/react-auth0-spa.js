@@ -1,9 +1,23 @@
 import React, { useState, useEffect, useContext } from "react";
 import createAuth0Client from "@auth0/auth0-spa-js";
+import gql from 'graphql-tag';
+import { useQuery } from '@apollo/react-hooks';
 
 const DEFAULT_REDIRECT_CALLBACK = () =>
   window.history.replaceState({}, document.title, window.location.pathname);
-
+  
+const QUERY_PERSON = gql`query queryPerson {
+  person(google_id: "115306037822201585694") {
+    google_id
+    email
+    verified_email
+    name
+    given_name
+    family_name
+    picture
+    locale
+  }
+}`;
 export const Auth0Context = React.createContext();
 export const useAuth0 = () => useContext(Auth0Context);
 export const Auth0Provider = ({
@@ -11,11 +25,30 @@ export const Auth0Provider = ({
   onRedirectCallback = DEFAULT_REDIRECT_CALLBACK,
   ...initOptions
 }) => {
+  function QueryPerson() {
+    const { loading, error, data } = useQuery(QUERY_PERSON);
+    // console.log(user, "user");
+    if (loading) return 'Loading...';
+    if (error) return `Error! ${error.message}`;
+    console.log("data", data);
+    
+    return (null
+      // <select name="dog" onChange={onDogSelected}>
+      //   {data.dogs.map(dog => (
+      //     <option key={dog.id} value={dog.breed}>
+      //       {dog.breed}
+      //     </option>
+      //   ))}
+      // </select>
+    );
+  }
   const [isAuthenticated, setIsAuthenticated] = useState();
   const [user, setUser] = useState();
   const [auth0Client, setAuth0] = useState();
   const [loading, setLoading] = useState(true);
   const [popupOpen, setPopupOpen] = useState(false);
+  
+ 
 
   useEffect(() => {
     const initAuth0 = async () => {
@@ -34,6 +67,8 @@ export const Auth0Provider = ({
       if (isAuthenticated) {
         const user = await auth0FromHook.getUser();
         setUser(user);
+        // console.log(user, ' logged in');
+        QueryPerson()
       }
 
       setLoading(false);
@@ -53,6 +88,8 @@ export const Auth0Provider = ({
     }
     const user = await auth0Client.getUser();
     setUser(user);
+    // console.log(user, ' logged in');
+    QueryPerson()
     setIsAuthenticated(true);
   };
 
@@ -63,7 +100,27 @@ export const Auth0Provider = ({
     setLoading(false);
     setIsAuthenticated(true);
     setUser(user);
+    // console.log(user, ' logged in');
+    QueryPerson()
   };
+  
+  // function QueryPerson() {
+  //   const { loading, error, data } = useLazyQuery(QUERY_PERSON);
+  //   // console.log(user, "user");
+  //   if (loading) return 'Loading...';
+  //   if (error) return `Error! ${error.message}`;
+  //   console.log("data", data);
+  //   return (null
+  //     // <select name="dog" onChange={onDogSelected}>
+  //     //   {data.dogs.map(dog => (
+  //     //     <option key={dog.id} value={dog.breed}>
+  //     //       {dog.breed}
+  //     //     </option>
+  //     //   ))}
+  //     // </select>
+  //   );
+  // }
+  
   return (
     <Auth0Context.Provider
       value={{
