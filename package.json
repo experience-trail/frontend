@@ -7,27 +7,15 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "@apollo/react-hooks": "^0.1.0-beta.11",
     "@auth0/auth0-spa-js": "^1.0.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
-    "apollo-boost": "^0.4.3",
-    "apollo-client": "^2.6.4",
     "express": "^4.16.4",
-    "graphql": "^14.4.2",
-    "graphql-tag": "^2.10.1",
     "highlight.js": "^9.15.6",
-    "moment": "^2.24.0",
     "morgan": "^1.9.1",
-    "node-sass": "^4.12.0",
-    "nouislider": "^14.0.2",
     "react": "^16.8.6",
-    "react-apollo": "^2.5.8",
-    "react-bootstrap-switch": "^15.5.3",
-    "react-datetime": "^2.16.3",
     "react-dom": "^16.8.6",
-    "react-router": "^5.0.1",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.1",
     "reactstrap": "^8.0.0"
@@ -35,7 +23,6 @@
   "devDependencies": {
     "@types/node": "^12.6.3",
     "@types/react": "^16.8.23",
-    "prettier": "1.18.2",
     "typescript": "^3.5.3"
   },
   "eslintConfig": {
