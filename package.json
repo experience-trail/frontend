@@ -1,53 +1,47 @@
 {
-  "name": "experiencetrail",
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "dependencies": {
-    "@apollo/react-hooks": "^0.1.0-beta.11",
-    "@auth0/auth0-spa-js": "^1.0.2",
-    "@fortawesome/fontawesome-svg-core": "^1.2.17",
-    "@fortawesome/free-solid-svg-icons": "^5.8.1",
-    "@fortawesome/react-fontawesome": "^0.1.4",
-    "apollo-boost": "^0.4.3",
-    "express": "^4.16.4",
-    "graphql": "^14.4.2",
-    "highlight.js": "^9.15.6",
-    "moment": "^2.24.0",
-    "morgan": "^1.9.1",
-    "node-sass": "^4.12.0",
-    "nouislider": "^14.0.2",
-    "react": "^16.8.6",
-    "react-bootstrap-switch": "^15.5.3",
-    "react-datetime": "^2.16.3",
-    "react-dom": "^16.8.6",
-    "react-router": "^5.0.1",
-    "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.1",
-    "reactstrap": "^8.0.0"
-  },
-  "devDependencies": {
-    "@types/node": "^12.6.3",
-    "@types/react": "^16.8.23",
-    "prettier": "1.18.2",
-    "typescript": "^3.5.3"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+	"name": "experiencetrail",
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"dependencies": {
+		"@apollo/react-hooks": "^0.1.0-beta.11",
+		"@auth0/auth0-spa-js": "^1.0.2",
+		"@fortawesome/fontawesome-svg-core": "^1.2.17",
+		"@fortawesome/free-solid-svg-icons": "^5.8.1",
+		"@fortawesome/react-fontawesome": "^0.1.4",
+		"apollo-boost": "^0.4.3",
+		"express": "^4.16.4",
+		"graphql": "^14.4.2",
+		"highlight.js": "^9.15.6",
+		"morgan": "^1.9.1",
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6",
+		"react-router-dom": "^5.0.0",
+		"react-scripts": "3.0.1",
+		"reactstrap": "^8.0.0"
+	},
+	"devDependencies": {
+		"@types/node": "^12.6.3",
+		"@types/react": "^16.8.23",
+		"prettier": "1.18.2",
+		"typescript": "^3.5.3"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
 }
