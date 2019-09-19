@@ -70,10 +70,10 @@ export const Auth0Provider = ({
             alert(error.message);
         }
         console.log('data: ', data);
-        if (data.person == null) {
-            // first time user logic should be triggered here
-            // const [createPerson, {data}] = useMutation(CREATE_PERSON);
-        }
+        // if (data.person == null) {
+        //     // first time user logic should be triggered here
+        //     // const [createPerson, {data}] = useMutation(CREATE_PERSON);
+        // }
         return null;
     }
     useEffect(() => {
