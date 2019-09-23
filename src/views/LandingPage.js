@@ -2,10 +2,10 @@ import React, { Fragment } from "react";
 
 import Hero from "../components/Hero";
 
-const Home = () => (
+const LandingPage = () => (
   <Fragment>
     <Hero />
   </Fragment>
 );
 
-export default Home;
+export default LandingPage;

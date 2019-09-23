@@ -9,13 +9,14 @@ import {ApolloProvider} from "react-apollo";
 import PrivateRoute from "./components/PrivateRoute";
 import Loading from "./components/Loading";
 import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
-import Home from "./views/Home";
+// import Footer from "./components/Footer";
+import LandingPage from "./views/LandingPage";
+import Home from "./views/home/Home";
 import Profile from "./views/Profile";
 import { useAuth0 } from "./react-auth0-spa";
 
 // styles
-import "./App.css";
+import "./App.scss";
 
 // fontawesome
 import initFontAwesome from "./utils/initFontAwesome";
@@ -33,7 +34,7 @@ const App = () => {
   if (loading) {
     return <Loading />;
   }
-
+  
   return (
     <Router>
       <ApolloProvider client = {client}>
@@ -41,11 +42,12 @@ const App = () => {
           <NavBar />
           <Container className="flex-grow-1 mt-5">
             <Switch>
-              <Route path="/" exact component={Home} />
+              <Route path="/" exact component={LandingPage} />
+              <Route path="/home" component={Home} />
               <PrivateRoute path="/profile" component={Profile} />
             </Switch>
           </Container>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </ApolloProvider>
     </Router>
