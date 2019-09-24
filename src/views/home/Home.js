@@ -28,9 +28,9 @@ const Home = () => (
     <p className="caption">Temp caption</p>
   </div>
   <div className="home-footer">
-    <i class="fa fa-arrow-up fa-2x"></i>    
-    <i class="fa fa-search fa-2x" ></i>
-    <i class="fa fa-upload fa-2x"></i>
+    <i className="fa fa-arrow-up fa-2x"></i>    
+    <i className="fa fa-search fa-2x" ></i>
+    <i className="fa fa-upload fa-2x"></i>
   </div>
 </div>
 );

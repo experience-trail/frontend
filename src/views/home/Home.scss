@@ -4,8 +4,7 @@
     flex-direction: column;
     align-items: left;
     width: 60vw;
-    height: 100vh;
-    margin:0 auto;
+    margin:3rem auto 5rem;
     .user-post-info{
         display: flex;
         flex-direction: row;
@@ -23,8 +22,8 @@
     }
     .img-container{
         margin: 1rem 0;
-        width:100%;
-        height:60%;
+        width:48.4rem;
+        height:50rem;
         display: flex;
         justify-content: center;
         .post-img{
@@ -55,7 +54,6 @@
         }
     }
     .caption-container{
-        
         .caption{
 
         }
