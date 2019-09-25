@@ -11,6 +11,7 @@ import NavBar from "./components/NavBar";
 // import Footer from "./components/Footer";
 import LandingPage from "./views/LandingPage";
 import Home from "./views/home/Home";
+import Album from "./views/album/Album";
 import Profile from "./views/profile/Profile";
 import { useAuth0 } from "./react-auth0-spa";
 
@@ -42,7 +43,8 @@ const App = () => {
             <Switch>
               <Route path="/" exact component={LandingPage} />
               <Route path="/home" component={Home} />
-              <Route path="/profile" component={Profile} />
+              <Route path="/album" component={Album} />
+              <PrivateRoute path="/profile" component={Profile} />
             </Switch>
           {/* <Footer /> */}
         </div>

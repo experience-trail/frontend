@@ -47,6 +47,14 @@ const NavBar = () => {
                 >
                   Home
                 </NavLink>
+                <NavLink
+                  tag={RouterNavLink}
+                  to="/album"
+                  exact
+                  activeClassName="router-link-exact-active"
+                >
+                  Album
+                </NavLink>
               </NavItem>
             </Nav>
             <Nav className="d-none d-md-block" navbar>
