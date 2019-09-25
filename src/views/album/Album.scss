@@ -1,0 +1,62 @@
+.album_container{
+    margin: 3rem;
+    .album_create_select{
+        display: flex;
+        justify-content: space-between;
+        .album_create{
+            width: 70%;
+            .album_form{
+                display: flex;
+                h3{
+
+                }
+                form{
+
+                    input{
+
+                    }
+                }
+            }
+            button{
+
+            }
+        }
+        .album_select{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+            border: 1px solid black;
+            h3{
+                cursor: pointer;
+            }
+        }
+    }
+    .album_selected_images{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h2{
+            margin:auto;
+        }
+        .album_images{
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            .img_box{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                margin:1rem;
+                width:30%;
+                height:15rem;
+                box-sizing: border-box;
+                overflow: hidden;
+                background-color: rgb(232, 232, 232);
+                img{
+                    width:100%;
+                }
+            }
+        }
+    }
+}
